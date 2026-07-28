@@ -10,11 +10,12 @@ This repo is a single-plugin marketplace: the plugin manifest and marketplace ma
 
 - `.claude-plugin/plugin.json` — plugin metadata (`ether-ltm`)
 - `.claude-plugin/marketplace.json` — local marketplace registering this plugin
-- `commands/*.md` — slash commands (`/remember`, `/declare`, `/assume`, `/note`, `/retract`, `/park`, `/extract`, `/query`, `/memory-status`)
+- `commands/*.md` — slash commands (`/remember`, `/declare`, `/assume`, `/note`, `/retract`, `/park`, `/extract`, `/ingest`, `/query`, `/memory-status`)
 - `hooks/hooks.json` — `SessionStart`, `UserPromptSubmit`, `Stop` hooks
 - `scripts/*.py` — Python entry points invoked by hooks, commands, and offline consolidation
 - `scripts/run-python.sh` — interpreter locator used by hooks
 - `skills/memory-ltm/SKILL.md` — provenance rules the agent must consult before recording, recalling, or reporting on memory
+- `skills/memory-ingest/SKILL.md` — draft/confirm/batch/audit workflow for reading external documents into the LTM at the extraction rung
 
 ## Authoring
 

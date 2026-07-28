@@ -68,6 +68,7 @@ empty one.
 | `/retract` | declaration/retraction | 8 | supersede — never deletes |
 | `/park` | declaration/parked | 6 | seen and set aside |
 | `/extract` | extraction/source-fact | 3 | agent-recorded, source anchor required |
+| `/ingest` | extraction (batch) | 3 | read a file (md, pdf, notebook); draft → confirm → batch → audit |
 | `/query` | *(read)* | — | strict read-out with a receipt |
 | `/memory-status` | *(read)* | — | doctor + snapshot |
 

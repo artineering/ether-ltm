@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0
+
+- `/ingest <path>` command and `memory-ingest` skill: read an external
+  document (md, txt, pdf, notebook) into the LTM at the extraction
+  rung, via a draft → confirm → batch → audit workflow. Reuses
+  `ether_record.py batch` and `audit`; adds no new dependencies.
+
 ## 0.1.1
 
 - Hooks locate the interpreter via `scripts/run-python.sh` instead of
