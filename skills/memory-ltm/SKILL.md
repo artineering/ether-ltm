@@ -1,6 +1,6 @@
 ---
 name: memory-ltm
-description: Provenance rules for the ETHER long-term memory. Consult this whenever recording, recalling, or reporting on memory — including any time you are about to say something was remembered, stored, pinned, or that memory holds nothing. Also use before answering from MEMORY.md or project memory files, since those are NOT the ETHER store.
+description: "Use when recording, recalling, or reporting on the ETHER long-term memory — including any time you are about to say something was remembered, stored, pinned, or that memory holds nothing. Invoke before answering from MEMORY.md or project memory files, since those are NOT the ETHER store. Enforces provenance rules: every claim about memory must be sourced from memory."
 ---
 
 # ETHER memory — provenance rules
@@ -92,3 +92,12 @@ propose deleting memory — propose retracting it.
 Run `/memory-status` (the doctor). It checks each layer independently
 and proves the read path with a live query and receipt. Report what it
 printed rather than diagnosing from intuition.
+
+## Reflection Gate
+
+Before marking a memory task complete, open `docs/insights.md` (create
+if missing) and append a row:
+
+| Date | Skill | Worked Well | Unexpected | Do Differently |
+|------|-------|-------------|------------|----------------|
+| YYYY-MM-DD | memory-ltm | _answer_ | _answer_ | _answer_ |
