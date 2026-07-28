@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "ether-ltm",
+  "displayName": "ETHER Long-Term Memory",
+  "version": "0.1.1",
+  "description": "Provenance-disciplined long-term memory: counting-sketch familiarity, append-only event log, verified writes, strict read-outs.",
+  "author": {
+    "name": "Siddharth"
+  },
+  "license": "MIT",
+  "keywords": [
+    "memory",
+    "ltm",
+    "provenance",
+    "sqlite",
+    "research"
+  ],
+  "userConfig": {
+    "store_path": {
+      "type": "directory",
+      "title": "Memory store location",
+      "description": "Directory holding ether.db. Leave empty for ~/.claude/ether-ltm/store. Set an absolute path to share one memory across every project. The value is persisted to ~/.claude/ether-ltm/ether.config.json at session start so command-line invocations resolve to the same database.",
+      "required": false
+    },
+    "encoder_model": {
+      "type": "string",
+      "title": "Consolidation encoder model",
+      "description": "Model alias for the offline consolidation job (haiku, sonnet). Only the consolidator calls a model; hooks never do.",
+      "default": "haiku",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ether-ltm-local",
+  "owner": { "name": "Siddharth" },
+  "metadata": {
+    "description": "Local marketplace for the ETHER long-term memory plugin."
+  },
+  "plugins": [
+    {
+      "name": "ether-ltm",
+      "source": "./",
+      "description": "Provenance-disciplined long-term memory for Claude Code.",
+      "version": "0.1.1"
+    }
+  ]
+}

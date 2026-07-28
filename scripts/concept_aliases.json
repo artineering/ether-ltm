@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "purpose": "Explicit alias table -- the cheap, declarative half of canonicalization (diary F18, gap 3). Maps surface forms to canonical concept keys. Loaded by ether_consolidate.py; alias hits override any automatic resolution.",
+    "provenance": "declaration",
+    "note": "Safe default is to UNDER-merge: splitting a concept loses count and is recoverable; over-merging fuses two histories and corrupts the F18 familiarity snapshots. Only add aliases you are willing to declare identical.",
+    "version": 1,
+    "updated": "2026-07-28"
+  },
+  "canonical": {
+    "hot-tier": {
+      "label": "HOT",
+      "kind": "tier",
+      "status": "not-built",
+      "holds": "live context window; verbatim, equally weighted",
+      "aliases": ["hot", "hot path", "hot layer", "active context", "working set", "the window", "context window"]
+    },
+    "warm-tier": {
+      "label": "WARM",
+      "kind": "tier",
+      "status": "not-built",
+      "holds": "high-activation neighborhoods one hop away; compressed episodes",
+      "aliases": ["warm", "warm path", "warm layer", "preloaded set", "near memory"]
+    },
+    "cold-tier": {
+      "label": "COLD",
+      "kind": "tier",
+      "status": "specified",
+      "holds": "persistent store: gist, concepts, edges; slow generative retrieval",
+      "aliases": ["cold", "cold path", "cold layer", "long-term store", "persistent store"]
+    },
+    "ether-tier": {
+      "label": "ETHER",
+      "kind": "tier",
+      "status": "built",
+      "holds": "content-free residues; familiarity only; never evicted; no promotion to content",
+      "aliases": ["ether", "the ether", "ether layer", "ether path", "the bottom tier", "bottom tier", "residue layer", "residue tier"],
+      "superseded_names": ["ash", "ash layer", "ash tier"]
+    },
+    "familiarity-sketch": {
+      "label": "Familiarity sketch",
+      "kind": "structure",
+      "status": "built",
+      "holds": "counting filter implementing ETHER; min-estimator read-out",
+      "aliases": ["the sketch", "counting sketch", "counting filter", "counting bloom filter", "bloom filter", "spectral filter", "count-min sketch", "ltm_sketch", "ltm_sketch.json"]
+    },
+    "concept-library": {
+      "label": "Concept library",
+      "kind": "structure",
+      "status": "specified",
+      "holds": "canonical concept nodes; the identity authority other structures cite",
+      "aliases": ["concept store", "concept table", "node library", "node store", "the library"]
+    },
+    "association-graph": {
+      "label": "Association graph",
+      "kind": "structure",
+      "status": "specified",
+      "holds": "typed weighted edges citing concept ids; spreading activation",
+      "aliases": ["the graph", "associative graph", "associative network", "association network", "edge store", "edge table"]
+    },
+    "episode-record": {
+      "label": "Episode record",
+      "kind": "structure",
+      "status": "specified",
+      "holds": "reference bag + gist + familiarity snapshot + recall list",
+      "aliases": ["episode", "episodic record", "episodic entry", "the fourth item", "episode node"]
+    },
+    "familiarity-snapshot": {
+      "label": "Familiarity snapshot",
+      "kind": "structure",
+      "status": "specified",
+      "holds": "frozen readout of sketch familiarity at capture time; the only readout-rung content",
+      "aliases": ["snapshot", "novelty snapshot", "encoding snapshot"]
+    },
+    "recall-list": {
+      "label": "Recall list",
+      "kind": "structure",
+      "status": "specified",
+      "holds": "last ~5 recall references per concept in an episode; answers where-have-I-seen-this",
+      "aliases": ["recalls", "recall history", "last five recalls", "recall chain"]
+    },
+    "index": {
+      "label": "Index",
+      "kind": "structure",
+      "status": "specified",
+      "holds": "entry points into the graph from concepts, edges and keywords",
+      "aliases": ["indexing system", "the index", "lookup layer", "entry index"]
+    },
+    "deposit-manifest": {
+      "label": "Deposit manifest",
+      "kind": "structure",
+      "status": "built",
+      "holds": "one interaction's extracted keys and weights, provenance-labeled",
+      "aliases": ["manifest", "manifests", "activation manifest", "encoder output", "reconstruction manifest"]
+    },
+    "capture": {
+      "label": "Capture",
+      "kind": "process",
+      "status": "built",
+      "holds": "hook-side, zero-model: dedupe, enqueue, weak deposit",
+      "aliases": ["the stop hook", "stop hook", "fast trace", "weak trace", "hippocampal capture", "capture phase"]
+    },
+    "consolidation": {
+      "label": "Consolidation",
+      "kind": "process",
+      "status": "built",
+      "holds": "offline batch: encode, refine, deposit at full weight, age",
+      "aliases": ["the sleep job", "sleep job", "batch job", "consolidator", "ether_consolidate", "ether_consolidate.py", "consolidation pass"]
+    },
+    "provenance-ladder": {
+      "label": "Provenance ladder",
+      "kind": "structure",
+      "status": "partial",
+      "holds": "readout -> reconstruction -> testimony -> declaration",
+      "aliases": ["the ladder", "provenance rungs", "rungs", "authority ranking", "provenance ranking"]
+    },
+    "deposit": {
+      "label": "Deposit",
+      "kind": "operation",
+      "status": "built",
+      "holds": "an activation entering the sketch; increments k counters by weight",
+      "aliases": ["deposits", "firing", "firings", "activation", "activations"]
+    },
+    "aging": {
+      "label": "Aging",
+      "kind": "operation",
+      "status": "built",
+      "holds": "periodic counter decay; weak traces vanish first",
+      "aliases": ["age", "decay", "halving", "aging pass", "decay pass"]
+    }
+  }
+}

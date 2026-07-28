@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [ { "type": "command",
+          "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/run-python.sh\" \"${CLAUDE_PLUGIN_ROOT}/scripts/sync_config.py\"",
+          "timeout": 10 } ] }
+    ],
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command",
+          "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/run-python.sh\" \"${CLAUDE_PLUGIN_ROOT}/scripts/ether_hook.py\"",
+          "timeout": 15 } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command",
+          "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/run-python.sh\" \"${CLAUDE_PLUGIN_ROOT}/scripts/ether_hook.py\"",
+          "timeout": 20 } ] }
+    ]
+  }
+}
